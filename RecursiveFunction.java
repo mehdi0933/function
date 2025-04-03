@@ -1,18 +1,20 @@
 package javacore.chapter04.function.exercise;
 
 public class RecursiveFunction {
+    
     public static void main(String[] args) {
-        goTo10000(1, 10000);
+        recusiveGoTo10000(1, 10000);
     }
-    public static void goTo10000(int number, int numberMax){
+
+    public static int recusiveGoTo10000(int number, int numberMax){
 
         if(number <= numberMax){
-
-        System.out.println(number);
-        number++;
-        goTo10000(number, numberMax);
-
+            System.out.println(number);
+            number++;
+            recusiveGoTo10000(number, numberMax);
+            return number;
         }
+        return 0 ;
     }
 }
 
